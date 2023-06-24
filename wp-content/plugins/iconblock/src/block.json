@@ -1,0 +1,38 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "create-block/iconblock",
+	"version": "0.1.0",
+	"title": "Iconblock",
+	"category": "text",
+	"icon": "icon",
+	"description": "Блок, отображающий карточки с иконками",
+	"attributes": {
+		"header": {
+			"type": "string",
+			"source": "text",
+			"selector": "h4",
+			"default": "Some Heading"
+		},
+		"content": {
+			"type": "string",
+			"source": "text",
+			"selector": "p",
+			"default": "Some content"
+		},
+		"icon": {
+			"type": "string",
+			"source": "attribute",
+			"default": "fa fa-flag",
+			"attribute": "class",
+			"selector": "i"
+		}
+	},
+	"supports": {
+		"html": false
+	},
+	"textdomain": "iconblock",
+	"editorScript": "file:./index.js",
+	"editorStyle": "file:./index.css",
+	"style": ["file:./style-index.css", "service-thumb" ]
+}

@@ -1,0 +1,49 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "create-block/gutenpride",
+  "version": "0.1.0",
+  "title": "Gutenpride",
+  "category": "text",
+  "icon": "flag",
+  "description": "A Gutenberg block to show your pride! This block enables you to type text and style it with the color font Gilbert from Type with Pride.",
+  "attributes": {
+    "back_url": {
+      "type": "string",
+      "source": "attribute",
+      "attribute": "data-bg",
+      "selector": "section",
+      "default": "/wp-content/themes/test-wp/images/home-bg.jpg"
+    },
+    "message": {
+      "type": "string",
+      "source": "text",
+      "selector": "h1",
+      "default": "Hello, I m Igor."
+    },
+    "second_message": {
+      "type": "string",
+      "source": "text",
+      "selector": "p",
+      "default": "Lorem ipsum dolor"
+    },
+    "link": {
+      "type": "string",
+      "source": "attribute",
+      "selector": "a",
+      "attribute": "href",
+      "default": "#link"
+    },
+    "link_text": {
+      "type": "string",
+      "default": "Read more.."
+    }
+  },
+  "supports": {
+    "html": false
+  },
+  "textdomain": "gutenpride",
+  "editorScript": "file:./index.js",
+  "editorStyle": "file:./index.css",
+  "style": "file:./style-index.css"
+}
